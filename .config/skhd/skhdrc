@@ -1,0 +1,24 @@
+# Hotkeys!
+
+## Launch Apps
+
+# browser
+alt - b : open -a /Applications/Arc.app
+
+# terminal
+alt - return : open -a /Applications/iTerm.app
+
+# file manager
+alt - f : open ~/
+
+# slack
+alt - s : open -a /Applications/Arc.app "https://app.slack.com/client/T082YBMNQ9G/C082Y95QY9H"
+
+# messages
+alt - g : open -a /System/Applications/Messages.app
+
+# email
+alt - e : open -a /Applications/Arc.app "https://mail.google.com/mail/u/0/#inbox"
+
+# calendar
+alt - c : open -a /Applications/Arc.app "https://calendar.google.com/calendar/u/0/r"
