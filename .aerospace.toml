@@ -13,9 +13,9 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget open -a /Applications/iTerm.app',
+  # 'exec-and-forget open -a /Applications/iTerm.app',
 #  'exec-and-forget open -a /Applications/Visual\ Studio\ Code.app',
-  'exec-and-forget open -a /Applications/Arc.app'
+  # 'exec-and-forget open -a /Applications/Arc.app'
 ]
 
 # Start AeroSpace at login
@@ -42,9 +42,9 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 key-mapping.preset = 'qwerty'
 
-# Mouse follows focus when focused monitor changes
+# Mouse follows  when ed monitor changes
 # Drop it from your config, if you don't like this behavior
-# See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
+# See https://nikitabobko.github.io/AeroSpace/guide#on--changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
@@ -85,53 +85,75 @@ outer.right =      8
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
-# alt-enter = '''exec-and-forget osascript -e '
-# tell application "/System/Applications/iTerm2.app"
-#     do script
-#     activate
-# end tell'
-# '''
+# alt-enter = 'exec-and-forget open -n /Applications/iTerm.app'
+
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 #alt-slash = 'layout tiles horizontal vertical'
 #alt-comma = 'layout accordion horizontal vertical'
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#focus
-# alt-h = 'focus left'
-# alt-j = 'focus down'
-# alt-k = 'focus up'
-# alt-l = 'focus right'
-ctrl-shift-alt-h = 'focus left'
-ctrl-shift-alt-j = 'focus down'
-ctrl-shift-alt-k = 'focus up'
-ctrl-shift-alt-l = 'focus right'
+# See: https://nikitabobko.github.io/AeroSpace/commands#
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+alt-left = 'focus left'
+alt-down = 'focus down'
+alt-up = 'focus up'
+alt-right = 'focus right'
+# ctrl-shift-alt-h = ' left'
+# ctrl-shift-alt-j = ' down'
+# ctrl-shift-alt-k = ' up'
+# ctrl-shift-alt-l = ' right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 # not working
-cmd-alt-ctrl-shift-h = 'move left'
-cmd-alt-ctrl-shift-j = 'move down'
-cmd-alt-ctrl-shift-k = 'move up'
-cmd-alt-ctrl-shift-l = 'move right'
+# cmd-alt-ctrl-shift-h = 'move left'
+# cmd-alt-ctrl-shift-j = 'move down'
+# cmd-alt-ctrl-shift-k = 'move up'
+# cmd-alt-ctrl-shift-l = 'move right'
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+alt-shift-left = 'move left'
+alt-shift-down = 'move down'
+alt-shift-up = 'move up'
+alt-shift-right = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-ctrl-shift-alt-minus = 'resize smart -50'
-ctrl-shift-alt-equal = 'resize smart +50'
+# ctrl-shift-alt-minus = 'resize smart -50'
+# ctrl-shift-alt-equal = 'resize smart +50'
+alt-shift-minus = 'resize smart -50'
+alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 # Capslock key
-ctrl-shift-alt-w = 'workspace web' # web
-ctrl-shift-alt-i = 'workspace ide' # IDE
-ctrl-shift-alt-t = 'workspace term' # terminal
-ctrl-shift-alt-f = 'workspace 1'
-ctrl-shift-alt-d = 'workspace 2'
-ctrl-shift-alt-s = 'workspace 3'
-ctrl-shift-alt-a = 'workspace 4'
+# ctrl-shift-alt-w = 'workspace web' # web
+# ctrl-shift-alt-i = 'workspace ide' # IDE
+# ctrl-shift-alt-t = 'workspace term' # terminal
+# ctrl-shift-alt-f = 'workspace 1'
+# ctrl-shift-alt-d = 'workspace 2'
+# ctrl-shift-alt-s = 'workspace 3'
+# ctrl-shift-alt-a = 'workspace 4'
 #cmd-alt-ctrl-5 = 'workspace 5'
 #cmd-alt-ctrl-6 = 'workspace 6'
 #cmd-alt-ctrl-7 = 'workspace 7'
 #cmd-alt-ctrl-8 = 'workspace 8'
 #cmd-alt-ctrl-9 = 'workspace 9'
-#alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+
+# For reg keyboard
+alt-1 = 'workspace 1' 
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+
+# For ergo :)
+alt-f = 'workspace 1' 
+alt-d = 'workspace 2'
+alt-s = 'workspace 3'
+alt-a = 'workspace 4'
+#alt-a = 'workspace A' 
 #alt-b = 'workspace B'
 #alt-c = 'workspace C'
 #alt-d = 'workspace D'
@@ -156,19 +178,27 @@ ctrl-shift-alt-a = 'workspace 4'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 # Capslock + shift
-cmd-alt-ctrl-shift-f = 'move-node-to-workspace 1'
-cmd-alt-ctrl-shift-d = 'move-node-to-workspace 2'
-cmd-alt-ctrl-shift-s = 'move-node-to-workspace 3'
-cmd-alt-ctrl-shift-a = 'move-node-to-workspace 4'
+# cmd-alt-ctrl-shift-f = 'move-node-to-workspace 1'
+# cmd-alt-ctrl-shift-d = 'move-node-to-workspace 2'
+# cmd-alt-ctrl-shift-s = 'move-node-to-workspace 3'
+# cmd-alt-ctrl-shift-a = 'move-node-to-workspace 4'
 #cmd-alt-ctrl-shift-5 = 'move-node-to-workspace 5'
 #cmd-alt-ctrl-shift-6 = 'move-node-to-workspace 6'
 #cmd-alt-ctrl-shift-7 = 'move-node-to-workspace 7'
 #cmd-alt-ctrl-shift-8 = 'move-node-to-workspace 8'
 #cmd-alt-ctrl-shift-9 = 'move-node-to-workspace 9'
-#alt-shift-a = 'move-node-to-workspace A'
-#alt-shift-b = 'move-node-to-workspace B'
-#alt-shift-c = 'move-node-to-workspace C'
-#alt-shift-d = 'move-node-to-workspace D'
+
+# For reg keyboard
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+# For ergo :)
+alt-shift-f = 'move-node-to-workspace 1'
+alt-shift-d = 'move-node-to-workspace 2'
+alt-shift-s = 'move-node-to-workspace 3'
+alt-shift-a = 'move-node-to-workspace 4'
+
 #alt-shift-e = 'move-node-to-workspace E'
 #alt-shift-f = 'move-node-to-workspace F'
 #alt-shift-g = 'move-node-to-workspace G'
@@ -210,17 +240,17 @@ backspace = ['close-all-windows-but-current', 'mode main']
 # alt-shift-k = ['join-with up', 'mode main']
 # alt-shift-l = ['join-with right', 'mode main']
 
-[[on-window-detected]]
-    if.app-id = 'com.googlecode.iterm2'
-    run = 'move-node-to-workspace term' # mnemonics T - Terminal
+# [[on-window-detected]]
+#     if.app-id = 'com.googlecode.iterm2'
+#     run = 'move-node-to-workspace term' # mnemonics T - Terminal
 
-[[on-window-detected]]
-    if.app-id = 'company.thebrowser.Browser'
-    run = 'move-node-to-workspace web' # mnemonics W - Web browser
+# [[on-window-detected]]
+#     if.app-id = 'company.thebrowser.Browser'
+#     run = 'move-node-to-workspace web' # mnemonics W - Web browser
 
-[[on-window-detected]]
-    if.app-id = 'com.microsoft.VSCode'
-    run = 'move-node-to-workspace ide' # mnemonics I - IDE
+# [[on-window-detected]]
+#     if.app-id = 'com.microsoft.VSCode'
+#     run = 'move-node-to-workspace ide' # mnemonics I - IDE
 
 [[on-window-detected]]
     if.app-id = 'org.love2d.love'
